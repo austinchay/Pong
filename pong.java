@@ -37,6 +37,7 @@ public class pong implements ActionListener, KeyListener, MouseMotionListener{
 	public void keyTyped(KeyEvent evt){
 		
 	}
+	// This is a overriden method for Mouse Motion Listener
 	public void mouseMoved(MouseEvent evt){
 		thepanel.intRect2Y = evt.getY();
 		//System.out.println(evt.getY());
