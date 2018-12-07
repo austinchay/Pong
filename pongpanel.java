@@ -26,10 +26,11 @@ public class pongpanel extends JPanel{
 		g.setColor(Color.BLACK);
 		g.fillRect(0,0,1280,640);
 		
-		g.setColor(Color.ORANGE);
+		g.setColor(Color.RED);
 		// rect with key movement rect
 		g.fillRect(80,intRectY,30,100);
 		// rect with mouse movement rect2
+		g.setColor(Color.YELLOW);
 		g.fillRect(1180,intRect2Y,30,100);
 		g.setColor(Color.WHITE);
 		g.fillOval(intBallX,intBallY,20,20);
@@ -45,7 +46,7 @@ public class pongpanel extends JPanel{
 			blndirection = true;
 		}
 	}
-		System.out.println(intRectY + " | X ball: " + intBallX + " | Y ball: " + intBallY);
+	
 		if(blndirection == true){
 			if(intBallX < 115 && (intBallY >= intRectY && intBallY <= (intRectY + 100))){
 				//System.out.println(intRectY + " | " + intBallX + " | " + intBallY);
@@ -72,11 +73,9 @@ public class pongpanel extends JPanel{
 			}
 	if(blndirection == true){
 		if(blnmin){
-			System.out.println("min:" + intRect2Y + " | " + intBallX  + " | " + intBallY);
 			intBallX -= intSpeed;
 			intBallY += intSpeed;
 		}else if(blnmax){
-			System.out.println("max:" + intRect2Y + " | " + intBallX  + " | " + intBallY);
 			intBallX -= intSpeed;
 			intBallY -= intSpeed;
 		}else{
@@ -86,11 +85,9 @@ public class pongpanel extends JPanel{
 	}
 	if(blndirection == false){
 		if(blnmin){
-			System.out.println("min2:" + intRect2Y + " | " + intBallX  + " | " + intBallY);
 			intBallX += intSpeed;
 			intBallY += intSpeed;
 		}else if(blnmax){
-			System.out.println("max2:" + intRect2Y + " | " + intBallX  + " | " + intBallY);
 			intBallX += intSpeed;
 			intBallY -= intSpeed;
 		}else{
@@ -105,7 +102,6 @@ public class pongpanel extends JPanel{
 			intRectY -= intSpeed;
 		}
 		if((intBallX < 80 && intBallY < 640) || (intBallX < 80 && intBallY < 0)){
-			System.out.println("BALL OUT:" + intScoreB + " | " + intBallX  + " | " + intBallY);
 			intScoreB += 1;
 			intBallX = 640;
 			intBallY = 320;

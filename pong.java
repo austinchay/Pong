@@ -27,7 +27,6 @@ public class pong implements ActionListener, KeyListener, MouseMotionListener{
 		}
 	}
 	public void keyPressed(KeyEvent evt){
-		System.out.println(evt.getKeyCode());
 		if(evt.getKeyCode() == 38){
 			thepanel.blnGoUp = true;
 		}else if(evt.getKeyCode() == 40){
